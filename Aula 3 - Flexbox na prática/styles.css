@@ -83,11 +83,15 @@ body {
 
 .c-header {
   background: var(--brand-color);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .c-logo {
   font-size: 20px;
   font-weight: bold;
+  flex-grow: 1;
   
   a {
     color: #fff;
@@ -95,53 +99,72 @@ body {
 }
 
 .c-header__nav {
-  
   li {
     display: inline-block;
   }
+
 }
 
 .c-header__nav a, .c-user___options a {
 
     padding: 8px;
     color: #fff;
+    display: flex;
 
 }
 
 .c-user {
-  
+  align-items: center;
   & img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-left: 10px;
+    
   }
 }
 
 /* Conteúdo Principal */
 
 .wrapper {
+  display: flex;
+  padding: 30px 0;
 }
 
 aside {
-
+  margin-left: 10rem;
+  height: 600px;
+  justify-content: space-between;
+  
     & li{
+      display: flex;
       padding: 0.5rem 0;
       cursor: pointer;
       font-weight: 500;
+      
       color: #555;
 
       &.active{
         color: #2563eb;
+        background-color: #2564eb1a;
+        border-radius: 0 20px 20px 0;
         font-weight: 700;
       }
+
     }
   }    
+aside footer {
+  margin-top: 22rem;
+}
 
 main {
 
+  margin-left: 50px;
+  max-width: 950px;
+  flex-direction: row;
   & i{
     margin: .5em;
+    flex-direction: row;
   }
 }
 
@@ -153,16 +176,23 @@ aside,
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   padding: 1rem;
+  
 }
 
 /* Top Sellers */
 .top-sellers {
     margin-top: 1rem;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    
     
 }
 
 .c-seller {
   margin-bottom: 2rem;
+  display: flex;
+  width: 220px;
   
   h3 {
     font-weight: bold;
@@ -180,6 +210,7 @@ aside,
 }
 
 .c-avatar {
+  display: flex;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -189,18 +220,22 @@ aside,
 /* Articles */
 
 .articles-wrapper {
-  
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .c-article {
-  
+  display: flex;
+  justify-content: center;
   @media (max-width: 699px) {
     margin-bottom: 1rem;
   }
   
   & a {
+    display: flex;
     color: #5a5a5a;
-    
   }
   
   & img {
@@ -212,6 +247,7 @@ aside,
   
   & h3 {
     font-size: 1.15rem;
+    
     line-height: 1.25;
     margin-bottom: 0.5rem;
   }
@@ -231,10 +267,14 @@ aside,
 }
 
 .search-bar {
+  display: flex;
   margin: 1rem 0;
+  gap: .5rem;
 }
 
 .search-bar input {
+  flex-grow: 1;
+  
   padding: 0.5rem 1rem;
   border-radius: 999px;
   border: 1px solid #ccc;
@@ -250,11 +290,11 @@ aside,
 }
 
 .articles-wrapper.stacked {
- 
+  display: inline-block;
+
 }
 
 .c-article.stacked {
-  
   img {
     height: 150px;
     margin-bottom: 0.5rem;
